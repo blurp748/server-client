@@ -1,8 +1,14 @@
-const net = require('net');
+const https = require('https');
+const fs = require('fs');
+
+const options = {
+    key: fs.readFileSync('/home/etudiant/tls-reverse/nginx-reverse/ssl/serveur_http.pem'),
+    cert: fs.readFileSync('/home/etudiant/tls-reverse/nginx-reverse/ssl/serveur_http.cert.pem')
+};
 
 const port = 8888;
 
-const server = net.createServer(onClientConnection);
+const server = https.createServer(options, onClientConnection);
 
 server.listen(port,function(){
    console.log(`Server started on port ${port}`); 
