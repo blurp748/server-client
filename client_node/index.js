@@ -17,7 +17,7 @@ client.connect(port,function(){
     console.log(`Connected to server on port ${port}`);
     
     const options = {
-        host: 'localhost',
+        host: 'www.tanghe.fr',
         port: port,
         rejectUnauthorized: false
     };
