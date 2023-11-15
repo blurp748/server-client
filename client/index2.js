@@ -7,9 +7,9 @@ const readline = require('readline').createInterface({
 const port = 8888;
 
 const options = {
-    host: 'www.tanghe.fr',
+    host: '127.0.0.1',
     port: port,
-    rejectUnauthorized: false // Note: For testing purposes; use a valid certificate in production
+    rejectUnauthorized: true
 };
 
 const secureSocket = tls.connect(options, () => {
@@ -19,7 +19,7 @@ const secureSocket = tls.connect(options, () => {
         if (calculation === '0') {
             secureSocket.destroy();
         }
-        readline.close();
+	readline.close();
     });
 });
 

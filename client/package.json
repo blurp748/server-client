@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "works": "node index.js",
+    "unverified": "node index2.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,3 +14,4 @@
     "tls": "^0.0.1"
   }
 }
+
